@@ -1,0 +1,22 @@
+{
+  "name": "fluentui-system-icons-font",
+  "version": "0.0.1",
+  "description": "A script for building icon fonts based on assets from the microsoft/fluentui-system-icons repository at GitHub",
+  "main": "generate-webfonts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wazybr/fluetui-system-icons-font.git"
+  },
+  "author": "wazybr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wazybr/fluetui-system-icons-font/issues"
+  },
+  "homepage": "https://github.com/wazybr/fluetui-system-icons-font#readme",
+  "dependencies": {
+    "icon-font-buildr": "^1.3.4"
+  }
+}
