@@ -8,15 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wazybr/fluetui-system-icons-font.git"
+    "url": "git+https://github.com/wazybr/fluentui-system-icons-font.git"
   },
   "author": "wazybr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wazybr/fluetui-system-icons-font/issues"
+    "url": "https://github.com/wazybr/fluentui-system-icons-font/issues"
   },
-  "homepage": "https://github.com/wazybr/fluetui-system-icons-font#readme",
+  "homepage": "https://github.com/wazybr/fluentui-system-icons-font#readme",
   "dependencies": {
+    "fs-extra": "^9.0.1",
     "icon-font-buildr": "^1.3.4"
   }
 }
