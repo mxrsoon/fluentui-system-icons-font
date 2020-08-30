@@ -80,7 +80,7 @@ async function buildIconFonts(iconSets) {
 			// Build font for each icon set
 			const builder = new IconFontBuildr({
 				// IconFontBuildr requires the [icon] placeholder in source file names
-				sources: icons.map(icon => path.join(icon.sourceFile.replace(icon.icon, "[icon]"))),
+				sources: icons.map(icon => icon.sourceFile.replace(icon.icon, "[icon]")),
 				icons,
 				output: {
 					codepoints: false,
