@@ -21,6 +21,7 @@ ${classNames.join(",\n")} {
 	line-height: 1;
 	letter-spacing: normal;
 	text-transform: none;
+	user-select: none;
 	display: inline-block;
 	white-space: nowrap;
 	word-wrap: normal;
