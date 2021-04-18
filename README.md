@@ -36,7 +36,7 @@ npm install
 Before running the script, you may want to update the assets:
 ```
 cd fluentui-system-icons
-git pull
+git pull origin master
 ```
 
 Then go back to the script directory:
