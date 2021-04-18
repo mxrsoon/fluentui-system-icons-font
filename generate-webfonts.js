@@ -16,10 +16,6 @@ function capitalizeFirstLetter(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function toSnakeCase(str) {
-	return str.split(" ").join("_").toLowerCase();
-}
-
 async function getIconSets(assetsDir) {
 	const assets = await fs.readdir(assetsDir, { withFileTypes: true });
 	const iconSets = {};
@@ -38,9 +34,10 @@ async function getIconSets(assetsDir) {
 					// Remove extension from file name
 					svgName = svgName.split(".").slice(0, -1).join(".");
 
-					// Split file name and get style and size from it
-					const svgNameParts = svgName.split("_");
-					const [size, style] = svgNameParts.slice(svgNameParts.length - 2);
+					// Split file name and get alias, style and size from it
+					const nameParts = svgName.split("_");
+					const alias = nameParts.slice(2, nameParts.length - 2).join("_");
+					const [size, style] = nameParts.slice(nameParts.length - 2);
 
 					// If there's no icon set for this style, initialize it
 					if (!(style in iconSets)) {
@@ -54,9 +51,9 @@ async function getIconSets(assetsDir) {
 
 					// Push icon data to the icon set
 					iconSets[style][size].push({
-						icon: toSnakeCase(icon.name),
+						icon: alias,
 						name: icon.name,
-						ligatures: [toSnakeCase(icon.name)],
+						ligatures: [alias],
 						sourceFile: svgPath
 					});
 				}
